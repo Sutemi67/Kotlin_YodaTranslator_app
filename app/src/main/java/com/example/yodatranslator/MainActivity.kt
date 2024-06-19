@@ -1,6 +1,9 @@
 package com.example.yodatranslator
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,11 +21,14 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val translateBaseUrl = "https://api.funtranslations.com"
+        val translated = findViewById<TextView>(R.id.translatedText)
+        val input = findViewById<EditText>(R.id.input)
+        val button = findViewById<Button>(R.id.translateButton)
 
-        val retrofit = Retrofit.Builder()
-            .baseUrl(translateBaseUrl)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
+        button.setOnClickListener {
+            if (input.text.isNullOrEmpty()) {
+                yodaTranslate(input.text.toString(), translated)
+            }
+        }
     }
 }
