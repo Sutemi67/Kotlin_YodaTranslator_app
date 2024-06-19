@@ -17,22 +17,24 @@
         android:text="Введите текст в поле ниже для перевода и нажите Перевести"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.259" />
+        app:layout_constraintVertical_bias="0.153" />
 
     <EditText
         android:id="@+id/input"
-        android:layout_width="300.dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:layout_margin="50dp"
         android:hint="прямо вот сюда"
         android:singleLine="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/translatedText"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintVertical_bias="0.158" />
 
     <Button
         android:id="@+id/translateButton"
